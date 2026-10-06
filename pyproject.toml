@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hx-harness"
+version = "0.1.0"
+description = "A local evidence-gated coding workflow over Codex CLI"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1", "pydantic>=2.10,<3", "uvicorn>=0.34,<1",
+  "filelock>=3.16,<4", "pytest>=8.3,<10", "httpx>=0.28,<1",
+  "coverage>=7.6,<8",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.11,<1"]
+polybench = ["docker>=7,<8", "requests>=2.32,<3"]
+
+[project.scripts]
+hx = "hx.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hx = ["prompts/*.md", "templates/backend/*.py", "templates/tests/*.py", "web/*.html", "web/*.css", "web/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = [".hx", "node_modules", "benchmarks/backend_reference.py", "benchmarks/advanced/backend_feature.py", "benchmarks/advanced/private_backend.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

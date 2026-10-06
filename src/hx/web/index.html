@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HX · Coding harness</title>
+  <link rel="stylesheet" href="/style.css?v=0.1.1">
+  <script src="/app.js?v=0.1.1" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/" aria-label="HX home">HX<span>CODING HARNESS</span></a>
+    <div class="environment"><span class="dot"></span><span id="environment">Local runtime</span></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">CONTROL IN CODE. JUDGMENT IN MODELS.</p><h1>Changes backed by evidence.</h1>
+      <p class="sub">Implement, verify, review. Every decision belongs to a recorded revision.</p></div>
+      <a class="docs" href="/docs" target="_blank" rel="noopener">API reference ↗</a>
+    </section>
+    <form id="connect" class="connection">
+      <label for="token">Connect to your local runtime</label>
+      <input id="token" type="password" autocomplete="off" placeholder="Paste the token from .hx/api-token.txt" required>
+      <button type="submit">Connect</button>
+      <small>The token stays in this tab’s memory.</small>
+    </form>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section class="metrics" aria-label="Run statistics">
+      <div><span>Total runs</span><strong id="total">—</strong></div>
+      <div><span>In progress</span><strong id="active">—</strong></div>
+      <div><span>Awaiting approval</span><strong id="ready">—</strong></div>
+      <div><span>Needs attention</span><strong id="attention">—</strong></div>
+    </section>
+    <div class="workspace">
+      <aside>
+        <div class="section-title"><h2>Runs</h2><button id="refresh" class="quiet" disabled>Refresh ↻</button></div>
+        <div id="runs" class="run-list"><p class="empty">Connect to view your runs.</p></div>
+        <details class="new-task">
+          <summary>＋ Submit a task</summary>
+          <form id="submit">
+            <label for="demo">Start from a demo task</label>
+            <select id="demo"><option value="">Custom task</option></select>
+            <label for="task">Task specification</label>
+            <textarea id="task" spellcheck="false" rows="14" placeholder='{"id":"my-fix","repo":"D:/projects/my-app","report":"Describe a small change..."}'></textarea>
+            <p class="hint">The runtime uses the committed repository snapshot. Model runs use your configured Codex account.</p>
+            <button id="submit-button" type="submit" disabled>Start workflow →</button>
+          </form>
+        </details>
+      </aside>
+      <section class="detail" id="detail">
+        <div class="empty-detail"><div class="symbol">↗</div><h2>Select a run</h2><p>Follow a candidate from implementation to a human decision.</p></div>
+      </section>
+    </div>
+    <footer>HX v0.1 <span>Local workflow · Approval records a decision; publishing is separate.</span></footer>
+  </main>
+</body>
+</html>

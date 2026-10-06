@@ -1,0 +1,383 @@
+id,repository,language,category,selected_split,issues,fix_pr
+google__gson-2337,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/2334,https://github.com/google/gson/pull/2337
+google__gson-2498,google/gson,Java,Feature,,https://github.com/google/gson/issues/1510,https://github.com/google/gson/pull/2498
+apache__rocketmq-7563,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7562,https://github.com/apache/rocketmq/pull/7563
+google__gson-2376,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/1219,https://github.com/google/gson/pull/2376
+apache__dubbo-3317,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/2423,https://github.com/apache/dubbo/pull/3317
+apolloconfig__apollo-4568,apolloconfig/apollo,Java,Bug Fix,,https://github.com/apolloconfig/apollo/issues/4565,https://github.com/apolloconfig/apollo/pull/4568
+apolloconfig__apollo-4207,apolloconfig/apollo,Java,Feature,,https://github.com/apolloconfig/apollo/issues/4018,https://github.com/apolloconfig/apollo/pull/4207
+google__gson-2410,google/gson,Java,Refactoring,,https://github.com/google/gson/issues/2405,https://github.com/google/gson/pull/2410
+google__gson-2134,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/2133,https://github.com/google/gson/pull/2134
+google__gson-2475,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/2407,https://github.com/google/gson/pull/2475
+apache__dubbo-3855,apache/dubbo,Java,Refactoring,,https://github.com/apache/dubbo/issues/3848,https://github.com/apache/dubbo/pull/3855
+google__gson-1904,google/gson,Java,Feature,,https://github.com/google/gson/issues/445,https://github.com/google/gson/pull/1904
+google__gson-2071,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/2067,https://github.com/google/gson/pull/2071
+google__gson-2435,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/1028,https://github.com/google/gson/pull/2435
+google__gson-1703,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/1702,https://github.com/google/gson/pull/1703
+google__gson-2345,google/gson,Java,Feature,,https://github.com/google/gson/issues/2344,https://github.com/google/gson/pull/2345
+google__gson-2060,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/847,https://github.com/google/gson/pull/2060
+google__gson-2479,google/gson,Java,Feature,,https://github.com/google/gson/issues/2436,https://github.com/google/gson/pull/2479
+apache__dubbo-3093,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/3069,https://github.com/apache/dubbo/pull/3093
+google__guava-3971,google/guava,Java,Feature,,https://github.com/google/guava/issues/1315,https://github.com/google/guava/pull/3971
+apache__dubbo-3622,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/3570,https://github.com/apache/dubbo/pull/3622
+google__gson-2167,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/1771,https://github.com/google/gson/pull/2167
+google__gson-2701,google/gson,Java,Feature,,https://github.com/google/gson/issues/2700,https://github.com/google/gson/pull/2701
+apolloconfig__apollo-1894,apolloconfig/apollo,Java,Bug Fix,,https://github.com/apolloconfig/apollo/issues/1893,https://github.com/apolloconfig/apollo/pull/1894
+apache__rocketmq-7532,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7531,https://github.com/apache/rocketmq/pull/7532
+google__gson-2158,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/2156,https://github.com/google/gson/pull/2158
+google__guava-5696,google/guava,Java,Bug Fix,,https://github.com/google/guava/issues/5692,https://github.com/google/guava/pull/5696
+apache__dubbo-8623,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/8516,https://github.com/apache/dubbo/pull/8623
+google__gson-2549,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/2547,https://github.com/google/gson/pull/2549
+google__gson-1989,google/gson,Java,Bug Fix,,https://github.com/google/gson/issues/1452,https://github.com/google/gson/pull/1989
+apolloconfig__apollo-4464,apolloconfig/apollo,Java,Feature,,https://github.com/apolloconfig/apollo/issues/4294,https://github.com/apolloconfig/apollo/pull/4464
+apache__rocketmq-7655,apache/rocketmq,Java,Feature,,https://github.com/apache/rocketmq/issues/7543,https://github.com/apache/rocketmq/pull/7655
+google__gson-2420,google/gson,Java,Feature,,https://github.com/google/gson/issues/2401,https://github.com/google/gson/pull/2420
+apache__dubbo-5783,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/4697,https://github.com/apache/dubbo/pull/5783
+apache__dubbo-4515,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/4514,https://github.com/apache/dubbo/pull/4515
+apache__rocketmq-7346,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7345,https://github.com/apache/rocketmq/pull/7346
+apache__dubbo-5356,apache/dubbo,Java,Refactoring,,https://github.com/apache/dubbo/issues/5355,https://github.com/apache/dubbo/pull/5356
+apache__dubbo-8126,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/8124,https://github.com/apache/dubbo/pull/8126
+apache__rocketmq-5841,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/5839,https://github.com/apache/rocketmq/pull/5841
+apache__rocketmq-7964,apache/rocketmq,Java,Feature,,https://github.com/apache/rocketmq/issues/7963,https://github.com/apache/rocketmq/pull/7964
+apache__rocketmq-7426,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7429,https://github.com/apache/rocketmq/pull/7426
+apache__dubbo-8414,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/8378,https://github.com/apache/dubbo/pull/8414
+apache__rocketmq-7823,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7822,https://github.com/apache/rocketmq/pull/7823
+apache__rocketmq-5633,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/5631,https://github.com/apache/rocketmq/pull/5633
+apache__dubbo-6498,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/6497,https://github.com/apache/dubbo/pull/6498
+apache__rocketmq-5062,apache/rocketmq,Java,Feature,,https://github.com/apache/rocketmq/issues/5012,https://github.com/apache/rocketmq/pull/5062
+apache__rocketmq-7420,apache/rocketmq,Java,Refactoring,,https://github.com/apache/rocketmq/issues/7313,https://github.com/apache/rocketmq/pull/7420
+apache__rocketmq-7745,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7740,https://github.com/apache/rocketmq/pull/7745
+apache__rocketmq-516,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/515,https://github.com/apache/rocketmq/pull/516
+apache__rocketmq-4122,apache/rocketmq,Java,Feature,,https://github.com/apache/rocketmq/issues/3914,https://github.com/apache/rocketmq/pull/4122
+apache__rocketmq-7712,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/7710,https://github.com/apache/rocketmq/pull/7712
+apache__dubbo-4567,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/4551,https://github.com/apache/dubbo/pull/4567
+apache__rocketmq-1636,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/1110,https://github.com/apache/rocketmq/pull/1636
+apache__rocketmq-5008,apache/rocketmq,Java,Bug Fix,,https://github.com/apache/rocketmq/issues/4999,https://github.com/apache/rocketmq/pull/5008
+apache__dubbo-4678,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/4248,https://github.com/apache/dubbo/pull/4678
+apache__dubbo-5708,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/5707,https://github.com/apache/dubbo/pull/5708
+apache__rocketmq-5037,apache/rocketmq,Java,Refactoring,,https://github.com/apache/rocketmq/issues/5036,https://github.com/apache/rocketmq/pull/5037
+apache__dubbo-4026,apache/dubbo,Java,Bug Fix,,https://github.com/apache/dubbo/issues/4007,https://github.com/apache/dubbo/pull/4026
+trinodb__trino-2707,trinodb/trino,Java,Refactoring,,https://github.com/trinodb/trino/issues/1983,https://github.com/trinodb/trino/pull/2707
+trinodb__trino-4393,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/4378,https://github.com/trinodb/trino/pull/4393
+trinodb__trino-3208,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/3195,https://github.com/trinodb/trino/pull/3208
+trinodb__trino-2081,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/1998,https://github.com/trinodb/trino/pull/2081
+trinodb__trino-3603,trinodb/trino,Java,Refactoring,,https://github.com/trinodb/trino/issues/3550,https://github.com/trinodb/trino/pull/3603
+trinodb__trino-3859,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/3829,https://github.com/trinodb/trino/pull/3859
+trinodb__trino-1512,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/1510,https://github.com/trinodb/trino/pull/1512
+trinodb__trino-2768,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/2767,https://github.com/trinodb/trino/pull/2768
+trinodb__trino-3392,trinodb/trino,Java,Feature,,https://github.com/trinodb/trino/issues/3394,https://github.com/trinodb/trino/pull/3392
+trinodb__trino-2575,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/2523,https://github.com/trinodb/trino/pull/2575
+trinodb__trino-3599,trinodb/trino,Java,Bug Fix,,https://github.com/trinodb/trino/issues/3456,https://github.com/trinodb/trino/pull/3599
+mrdoob__three.js-14836,mrdoob/three.js,JavaScript,Bug Fix,setup,https://github.com/mrdoob/three.js/issues/14834,https://github.com/mrdoob/three.js/pull/14836
+mrdoob__three.js-18648,mrdoob/three.js,JavaScript,Refactoring,,https://github.com/mrdoob/three.js/issues/18590,https://github.com/mrdoob/three.js/pull/18648
+mrdoob__three.js-20991,mrdoob/three.js,JavaScript,Feature,,https://github.com/mrdoob/three.js/issues/20921,https://github.com/mrdoob/three.js/pull/20991
+mrdoob__three.js-24461,mrdoob/three.js,JavaScript,Bug Fix,setup,https://github.com/mrdoob/three.js/issues/24441,https://github.com/mrdoob/three.js/pull/24461
+sveltejs__svelte-464,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/451,https://github.com/sveltejs/svelte/pull/464
+sveltejs__svelte-477,sveltejs/svelte,JavaScript,Feature,evaluation,https://github.com/sveltejs/svelte/issues/475,https://github.com/sveltejs/svelte/pull/477
+sveltejs__svelte-510,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/509,https://github.com/sveltejs/svelte/pull/510
+sveltejs__svelte-630,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/620,https://github.com/sveltejs/svelte/pull/630
+sveltejs__svelte-728,sveltejs/svelte,JavaScript,Bug Fix,evaluation,https://github.com/sveltejs/svelte/issues/721,https://github.com/sveltejs/svelte/pull/728
+sveltejs__svelte-738,sveltejs/svelte,JavaScript,Feature,,https://github.com/sveltejs/svelte/issues/693,https://github.com/sveltejs/svelte/pull/738
+sveltejs__svelte-906,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/905,https://github.com/sveltejs/svelte/pull/906
+sveltejs__svelte-907,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/904,https://github.com/sveltejs/svelte/pull/907
+sveltejs__svelte-1049,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1032,https://github.com/sveltejs/svelte/pull/1049
+sveltejs__svelte-1095,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1062,https://github.com/sveltejs/svelte/pull/1095
+sveltejs__svelte-1116,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1107,https://github.com/sveltejs/svelte/pull/1116
+sveltejs__svelte-1137,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1135,https://github.com/sveltejs/svelte/pull/1137
+sveltejs__svelte-1190,sveltejs/svelte,JavaScript,Refactoring,,https://github.com/sveltejs/svelte/issues/1118,https://github.com/sveltejs/svelte/pull/1190
+sveltejs__svelte-1227,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1223,https://github.com/sveltejs/svelte/pull/1227
+sveltejs__svelte-1231,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1229,https://github.com/sveltejs/svelte/pull/1231
+sveltejs__svelte-1310,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1300,https://github.com/sveltejs/svelte/pull/1310
+sveltejs__svelte-1376,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1297,https://github.com/sveltejs/svelte/pull/1376
+sveltejs__svelte-1923,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1919,https://github.com/sveltejs/svelte/pull/1923
+sveltejs__svelte-1932,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1931,https://github.com/sveltejs/svelte/pull/1932
+sveltejs__svelte-2185,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/2184,https://github.com/sveltejs/svelte/pull/2185
+sveltejs__svelte-3151,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/2906,https://github.com/sveltejs/svelte/pull/3151
+sveltejs__svelte-3305,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/3226,https://github.com/sveltejs/svelte/pull/3305
+sveltejs__svelte-3314,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/3312,https://github.com/sveltejs/svelte/pull/3314
+sveltejs__svelte-3394,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/2290,https://github.com/sveltejs/svelte/pull/3394
+sveltejs__svelte-3403,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/3321,https://github.com/sveltejs/svelte/pull/3403
+sveltejs__svelte-3435,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1834,https://github.com/sveltejs/svelte/pull/3435
+sveltejs__svelte-3451,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/2731,https://github.com/sveltejs/svelte/pull/3451
+sveltejs__svelte-3702,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/3588,https://github.com/sveltejs/svelte/pull/3702
+sveltejs__svelte-3749,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/3595,https://github.com/sveltejs/svelte/pull/3749
+sveltejs__svelte-3949,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/3948,https://github.com/sveltejs/svelte/pull/3949
+sveltejs__svelte-4146,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1277,https://github.com/sveltejs/svelte/pull/4146
+sveltejs__svelte-4288,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/1733,https://github.com/sveltejs/svelte/pull/4288
+sveltejs__svelte-4332,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/4314,https://github.com/sveltejs/svelte/pull/4332
+sveltejs__svelte-4454,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/4323,https://github.com/sveltejs/svelte/pull/4454
+sveltejs__svelte-4558,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/4549,https://github.com/sveltejs/svelte/pull/4558
+sveltejs__svelte-5452,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/5449,https://github.com/sveltejs/svelte/pull/5452
+sveltejs__svelte-5616,sveltejs/svelte,JavaScript,Feature,,https://github.com/sveltejs/svelte/issues/5456,https://github.com/sveltejs/svelte/pull/5616
+sveltejs__svelte-5850,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/5815,https://github.com/sveltejs/svelte/pull/5850
+sveltejs__svelte-5875,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/5516,https://github.com/sveltejs/svelte/pull/5875
+sveltejs__svelte-6414,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/6386,https://github.com/sveltejs/svelte/pull/6414
+sveltejs__svelte-6458,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/4551,https://github.com/sveltejs/svelte/pull/6458
+sveltejs__svelte-6525,sveltejs/svelte,JavaScript,Refactoring,,https://github.com/sveltejs/svelte/issues/6462,https://github.com/sveltejs/svelte/pull/6525
+sveltejs__svelte-6564,sveltejs/svelte,JavaScript,Feature,,https://github.com/sveltejs/svelte/issues/6270,https://github.com/sveltejs/svelte/pull/6564
+sveltejs__svelte-6759,sveltejs/svelte,JavaScript,Bug Fix,evaluation,https://github.com/sveltejs/svelte/issues/6753,https://github.com/sveltejs/svelte/pull/6759
+sveltejs__svelte-6941,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/6914,https://github.com/sveltejs/svelte/pull/6941
+sveltejs__svelte-7422,sveltejs/svelte,JavaScript,Bug Fix,,https://github.com/sveltejs/svelte/issues/7408,https://github.com/sveltejs/svelte/pull/7422
+prettier__prettier-14400,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/13197,https://github.com/prettier/prettier/pull/14400
+prettier__prettier-12930,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/12926,https://github.com/prettier/prettier/pull/12930
+prettier__prettier-11637,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/11635,https://github.com/prettier/prettier/pull/11637
+prettier__prettier-11000,prettier/prettier,JavaScript,Bug Fix,development,https://github.com/prettier/prettier/issues/10964,https://github.com/prettier/prettier/pull/11000
+prettier__prettier-9850,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/3009,https://github.com/prettier/prettier/pull/9850
+prettier__prettier-8777,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/8773,https://github.com/prettier/prettier/pull/8777
+prettier__prettier-8046,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/8041,https://github.com/prettier/prettier/pull/8046
+prettier__prettier-6604,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/6603,https://github.com/prettier/prettier/pull/6604
+prettier__prettier-5025,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/5023,https://github.com/prettier/prettier/pull/5025
+prettier__prettier-4667,prettier/prettier,JavaScript,Feature,,https://github.com/prettier/prettier/issues/4446,https://github.com/prettier/prettier/pull/4667
+prettier__prettier-3723,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/3440,https://github.com/prettier/prettier/pull/3723
+prettier__prettier-3515,prettier/prettier,JavaScript,Bug Fix,development,https://github.com/prettier/prettier/issues/3513,https://github.com/prettier/prettier/pull/3515
+prettier__prettier-3436,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/3403,https://github.com/prettier/prettier/pull/3436
+prettier__prettier-666,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/617,https://github.com/prettier/prettier/pull/666
+prettier__prettier-661,prettier/prettier,JavaScript,Feature,,https://github.com/prettier/prettier/issues/654,https://github.com/prettier/prettier/pull/661
+prettier__prettier-459,prettier/prettier,JavaScript,Bug Fix,development,https://github.com/prettier/prettier/issues/325,https://github.com/prettier/prettier/pull/459
+prettier__prettier-361,prettier/prettier,JavaScript,Bug Fix,,https://github.com/prettier/prettier/issues/360,https://github.com/prettier/prettier/pull/361
+serverless__serverless-8159,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/7008,https://github.com/serverless/serverless/pull/8159
+serverless__serverless-7617,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/7565,https://github.com/serverless/serverless/pull/7617
+serverless__serverless-7587,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/7586,https://github.com/serverless/serverless/pull/7587
+serverless__serverless-7374,serverless/serverless,JavaScript,Bug Fix,evaluation,https://github.com/serverless/serverless/issues/7369,https://github.com/serverless/serverless/pull/7374
+serverless__serverless-7277,serverless/serverless,JavaScript,Bug Fix,evaluation,https://github.com/serverless/serverless/issues/7276,https://github.com/serverless/serverless/pull/7277
+serverless__serverless-7102,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/7059,https://github.com/serverless/serverless/pull/7102
+serverless__serverless-6987,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/6949,https://github.com/serverless/serverless/pull/6987
+serverless__serverless-6869,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/6782,https://github.com/serverless/serverless/pull/6869
+serverless__serverless-6842,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/6841,https://github.com/serverless/serverless/pull/6842
+serverless__serverless-6827,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/6266,https://github.com/serverless/serverless/pull/6827
+serverless__serverless-6534,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/6262,https://github.com/serverless/serverless/pull/6534
+serverless__serverless-6447,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/6436,https://github.com/serverless/serverless/pull/6447
+serverless__serverless-6366,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/3676,https://github.com/serverless/serverless/pull/6366
+serverless__serverless-6261,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/6017,https://github.com/serverless/serverless/pull/6261
+serverless__serverless-5860,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/3495,https://github.com/serverless/serverless/pull/5860
+serverless__serverless-5842,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/5838,https://github.com/serverless/serverless/pull/5842
+serverless__serverless-5775,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/5398,https://github.com/serverless/serverless/pull/5775
+serverless__serverless-5640,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/4959,https://github.com/serverless/serverless/pull/5640
+serverless__serverless-5571,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/5558,https://github.com/serverless/serverless/pull/5571
+serverless__serverless-4192,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/3204,https://github.com/serverless/serverless/pull/4192
+serverless__serverless-3804,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/2888,https://github.com/serverless/serverless/pull/3804
+serverless__serverless-3799,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/3773,https://github.com/serverless/serverless/pull/3799
+serverless__serverless-3534,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/3362,https://github.com/serverless/serverless/pull/3534
+serverless__serverless-3457,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/3142,https://github.com/serverless/serverless/pull/3457
+serverless__serverless-3187,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/3088,https://github.com/serverless/serverless/pull/3187
+serverless__serverless-3095,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/3094,https://github.com/serverless/serverless/pull/3095
+serverless__serverless-2952,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/2508,https://github.com/serverless/serverless/pull/2952
+serverless__serverless-2945,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/2132,https://github.com/serverless/serverless/pull/2945
+serverless__serverless-2842,serverless/serverless,JavaScript,Feature,evaluation,https://github.com/serverless/serverless/issues/2828,https://github.com/serverless/serverless/pull/2842
+serverless__serverless-2576,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/2383,https://github.com/serverless/serverless/pull/2576
+serverless__serverless-2434,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/2418,https://github.com/serverless/serverless/pull/2434
+serverless__serverless-2014,serverless/serverless,JavaScript,Bug Fix,,https://github.com/serverless/serverless/issues/2024,https://github.com/serverless/serverless/pull/2014
+serverless__serverless-1910,serverless/serverless,JavaScript,Feature,,https://github.com/serverless/serverless/issues/1902,https://github.com/serverless/serverless/pull/1910
+microsoft__vscode-106767,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/106573,https://github.com/microsoft/vscode/pull/106767
+microsoft__vscode-108964,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/96545,https://github.com/microsoft/vscode/pull/108964
+microsoft__vscode-109750,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/109709,https://github.com/microsoft/vscode/pull/109750
+microsoft__vscode-110094,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/72177,https://github.com/microsoft/vscode/pull/110094
+microsoft__vscode-113837,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/113404,https://github.com/microsoft/vscode/pull/113837
+microsoft__vscode-122991,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/99629,https://github.com/microsoft/vscode/pull/122991
+microsoft__vscode-123294,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/121438,https://github.com/microsoft/vscode/pull/123294
+microsoft__vscode-127071,microsoft/vscode,TypeScript,Bug Fix,development,https://github.com/microsoft/vscode/issues/127035,https://github.com/microsoft/vscode/pull/127071
+microsoft__vscode-132628,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/132516,https://github.com/microsoft/vscode/pull/132628
+microsoft__vscode-135197,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/61070,https://github.com/microsoft/vscode/pull/135197
+microsoft__vscode-135805,microsoft/vscode,TypeScript,Feature,development,https://github.com/microsoft/vscode/issues/26393,https://github.com/microsoft/vscode/pull/135805
+microsoft__vscode-136347,microsoft/vscode,TypeScript,Bug Fix,development,https://github.com/microsoft/vscode/issues/116939,https://github.com/microsoft/vscode/pull/136347
+microsoft__vscode-148971,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/140733,https://github.com/microsoft/vscode/pull/148971
+microsoft__vscode-149380,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/149283,https://github.com/microsoft/vscode/pull/149380
+microsoft__vscode-153121,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/152773,https://github.com/microsoft/vscode/pull/153121
+microsoft__vscode-153857,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/151631,https://github.com/microsoft/vscode/pull/153857
+microsoft__vscode-157682,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/157634,https://github.com/microsoft/vscode/pull/157682
+microsoft__vscode-160342,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/108885,https://github.com/microsoft/vscode/pull/160342
+microsoft__vscode-164396,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/161573,https://github.com/microsoft/vscode/pull/164396
+microsoft__vscode-168752,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/119696,https://github.com/microsoft/vscode/pull/168752
+microsoft__vscode-173585,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/173325,https://github.com/microsoft/vscode/pull/173585
+microsoft__vscode-177084,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/176756,https://github.com/microsoft/vscode/pull/177084
+microsoft__vscode-189223,microsoft/vscode,TypeScript,Bug Fix,,https://github.com/microsoft/vscode/issues/189222,https://github.com/microsoft/vscode/pull/189223
+angular__angular-37561,angular/angular,TypeScript,Bug Fix,,https://github.com/angular/angular/issues/35733,https://github.com/angular/angular/pull/37561
+mui__material-ui-11451,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/11432,https://github.com/mui/material-ui/pull/11451
+mui__material-ui-11858,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/11834,https://github.com/mui/material-ui/pull/11858
+mui__material-ui-11987,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/4489,https://github.com/mui/material-ui/pull/11987
+mui__material-ui-12236,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/12216,https://github.com/mui/material-ui/pull/12236
+mui__material-ui-12303,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/11618,https://github.com/mui/material-ui/pull/12303
+mui__material-ui-12406,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/12247,https://github.com/mui/material-ui/pull/12406
+mui__material-ui-12968,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/12965,https://github.com/mui/material-ui/pull/12968
+mui__material-ui-13430,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/10327,https://github.com/mui/material-ui/pull/13430
+mui__material-ui-13534,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/10466,https://github.com/mui/material-ui/pull/13534
+mui__material-ui-13690,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/13346,https://github.com/mui/material-ui/pull/13690
+mui__material-ui-13778,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/13777,https://github.com/mui/material-ui/pull/13778
+mui__material-ui-13789,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/13648,https://github.com/mui/material-ui/pull/13789
+mui__material-ui-14364,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/14360,https://github.com/mui/material-ui/pull/14364
+mui__material-ui-14391,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/14387,https://github.com/mui/material-ui/pull/14391
+mui__material-ui-14496,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/14468,https://github.com/mui/material-ui/pull/14496
+mui__material-ui-14638,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/14538,https://github.com/mui/material-ui/pull/14638
+mui__material-ui-14882,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/11289,https://github.com/mui/material-ui/pull/14882
+mui__material-ui-15359,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/15262,https://github.com/mui/material-ui/pull/15359
+mui__material-ui-15526,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/15515,https://github.com/mui/material-ui/pull/15526
+mui__material-ui-15534,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/15533,https://github.com/mui/material-ui/pull/15534
+mui__material-ui-16397,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/15512,https://github.com/mui/material-ui/pull/16397
+mui__material-ui-17301,mui/material-ui,TypeScript,Refactoring,,https://github.com/mui/material-ui/issues/10763,https://github.com/mui/material-ui/pull/17301
+mui__material-ui-17829,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/17718,https://github.com/mui/material-ui/pull/17829
+mui__material-ui-18141,mui/material-ui,TypeScript,Bug Fix,evaluation,https://github.com/mui/material-ui/issues/18097,https://github.com/mui/material-ui/pull/18141
+mui__material-ui-18257,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/18255,https://github.com/mui/material-ui/pull/18257
+mui__material-ui-18683,mui/material-ui,TypeScript,Bug Fix,evaluation,https://github.com/mui/material-ui/issues/18670,https://github.com/mui/material-ui/pull/18683
+mui__material-ui-18796,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/18784,https://github.com/mui/material-ui/pull/18796
+mui__material-ui-18824,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/15728,https://github.com/mui/material-ui/pull/18824
+mui__material-ui-19072,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/18958,https://github.com/mui/material-ui/pull/19072
+mui__material-ui-19121,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19109,https://github.com/mui/material-ui/pull/19121
+mui__material-ui-19257,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19047,https://github.com/mui/material-ui/pull/19257
+mui__material-ui-19278,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19210,https://github.com/mui/material-ui/pull/19278
+mui__material-ui-19511,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/18646,https://github.com/mui/material-ui/pull/19511
+mui__material-ui-19794,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19778,https://github.com/mui/material-ui/pull/19794
+mui__material-ui-19849,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19454,https://github.com/mui/material-ui/pull/19849
+mui__material-ui-20232,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19882,https://github.com/mui/material-ui/pull/20232
+mui__material-ui-20252,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/19883,https://github.com/mui/material-ui/pull/20252
+mui__material-ui-20356,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/20296,https://github.com/mui/material-ui/pull/20356
+mui__material-ui-20368,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/20297,https://github.com/mui/material-ui/pull/20368
+mui__material-ui-20377,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/20343,https://github.com/mui/material-ui/pull/20377
+mui__material-ui-20657,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/19953,https://github.com/mui/material-ui/pull/20657
+mui__material-ui-20732,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/20730,https://github.com/mui/material-ui/pull/20732
+mui__material-ui-22696,mui/material-ui,TypeScript,Feature,evaluation,https://github.com/mui/material-ui/issues/19654,https://github.com/mui/material-ui/pull/22696
+mui__material-ui-23229,mui/material-ui,TypeScript,Bug Fix,evaluation,https://github.com/mui/material-ui/issues/22166,https://github.com/mui/material-ui/pull/23229
+mui__material-ui-23701,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/23603,https://github.com/mui/material-ui/pull/23701
+mui__material-ui-24105,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/24096,https://github.com/mui/material-ui/pull/24105
+mui__material-ui-24213,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/24198,https://github.com/mui/material-ui/pull/24213
+mui__material-ui-24742,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/24706,https://github.com/mui/material-ui/pull/24742
+mui__material-ui-25072,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/25011,https://github.com/mui/material-ui/pull/25072
+mui__material-ui-25874,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/21593,https://github.com/mui/material-ui/pull/25874
+mui__material-ui-26061,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/25923,https://github.com/mui/material-ui/pull/26061
+mui__material-ui-26098,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/26027,https://github.com/mui/material-ui/pull/26098
+mui__material-ui-26170,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/26166,https://github.com/mui/material-ui/pull/26170
+mui__material-ui-26623,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/20250,https://github.com/mui/material-ui/pull/26623
+mui__material-ui-26746,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/21902,https://github.com/mui/material-ui/pull/26746
+mui__material-ui-26807,mui/material-ui,TypeScript,Feature,evaluation,https://github.com/mui/material-ui/issues/26304,https://github.com/mui/material-ui/pull/26807
+mui__material-ui-27312,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/26378,https://github.com/mui/material-ui/pull/27312
+mui__material-ui-28186,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/28181,https://github.com/mui/material-ui/pull/28186
+mui__material-ui-28190,mui/material-ui,TypeScript,Bug Fix,evaluation,https://github.com/mui/material-ui/issues/28098,https://github.com/mui/material-ui/pull/28190
+mui__material-ui-28813,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/28520,https://github.com/mui/material-ui/pull/28813
+mui__material-ui-29023,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/28991,https://github.com/mui/material-ui/pull/29023
+mui__material-ui-34138,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/34137,https://github.com/mui/material-ui/pull/34138
+mui__material-ui-34158,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/33901,https://github.com/mui/material-ui/pull/34158
+mui__material-ui-34207,mui/material-ui,TypeScript,Feature,evaluation,https://github.com/mui/material-ui/issues/34198,https://github.com/mui/material-ui/pull/34207
+mui__material-ui-34610,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/34604,https://github.com/mui/material-ui/pull/34610
+mui__material-ui-36353,mui/material-ui,TypeScript,Bug Fix,evaluation,https://github.com/mui/material-ui/issues/36108,https://github.com/mui/material-ui/pull/36353
+mui__material-ui-36971,mui/material-ui,TypeScript,Feature,,https://github.com/mui/material-ui/issues/33423,https://github.com/mui/material-ui/pull/36971
+mui__material-ui-38247,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/37733,https://github.com/mui/material-ui/pull/38247
+mui__material-ui-38544,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/38406,https://github.com/mui/material-ui/pull/38544
+mui__material-ui-42412,mui/material-ui,TypeScript,Bug Fix,,https://github.com/mui/material-ui/issues/42252,https://github.com/mui/material-ui/pull/42412
+tailwindlabs__tailwindcss-116,tailwindlabs/tailwindcss,TypeScript,Bug Fix,setup,https://github.com/tailwindlabs/tailwindcss/issues/112,https://github.com/tailwindlabs/tailwindcss/pull/116
+tailwindlabs__tailwindcss-550,tailwindlabs/tailwindcss,TypeScript,Bug Fix,,https://github.com/tailwindlabs/tailwindcss/issues/549,https://github.com/tailwindlabs/tailwindcss/pull/550
+tailwindlabs__tailwindcss-853,tailwindlabs/tailwindcss,TypeScript,Feature,setup,https://github.com/tailwindlabs/tailwindcss/issues/850,https://github.com/tailwindlabs/tailwindcss/pull/853
+coder__code-server-4923,coder/code-server,TypeScript,Feature,,https://github.com/coder/code-server/issues/1466,https://github.com/coder/code-server/pull/4923
+coder__code-server-6278,coder/code-server,TypeScript,Bug Fix,,https://github.com/coder/code-server/issues/6275,https://github.com/coder/code-server/pull/6278
+Significant-Gravitas__AutoGPT-4652,Significant-Gravitas/AutoGPT,Python,Bug Fix,,https://github.com/Significant-Gravitas/AutoGPT/issues/3681,https://github.com/Significant-Gravitas/AutoGPT/pull/4652
+huggingface__transformers-3716,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/3711,https://github.com/huggingface/transformers/pull/3716
+huggingface__transformers-4759,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/3554,https://github.com/huggingface/transformers/pull/4759
+huggingface__transformers-5122,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/5114,https://github.com/huggingface/transformers/pull/5122
+huggingface__transformers-6098,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/6096,https://github.com/huggingface/transformers/pull/6098
+huggingface__transformers-7075,huggingface/transformers,Python,Refactoring,,https://github.com/huggingface/transformers/issues/7072,https://github.com/huggingface/transformers/pull/7075
+huggingface__transformers-7078,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/7077,https://github.com/huggingface/transformers/pull/7078
+huggingface__transformers-7374,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/7371,https://github.com/huggingface/transformers/pull/7374
+huggingface__transformers-7562,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/7514,https://github.com/huggingface/transformers/pull/7562
+huggingface__transformers-8435,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/5142,https://github.com/huggingface/transformers/pull/8435
+huggingface__transformers-8554,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/8553,https://github.com/huggingface/transformers/pull/8554
+huggingface__transformers-8624,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/5605,https://github.com/huggingface/transformers/pull/8624
+huggingface__transformers-8747,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/8601,https://github.com/huggingface/transformers/pull/8747
+huggingface__transformers-12981,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/12970,https://github.com/huggingface/transformers/pull/12981
+huggingface__transformers-13491,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/11096,https://github.com/huggingface/transformers/pull/13491
+huggingface__transformers-13693,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/13689,https://github.com/huggingface/transformers/pull/13693
+huggingface__transformers-13865,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/13847,https://github.com/huggingface/transformers/pull/13865
+huggingface__transformers-13919,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/13880,https://github.com/huggingface/transformers/pull/13919
+huggingface__transformers-13989,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/13522,https://github.com/huggingface/transformers/pull/13989
+huggingface__transformers-15158,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/15156,https://github.com/huggingface/transformers/pull/15158
+huggingface__transformers-15473,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/15466,https://github.com/huggingface/transformers/pull/15473
+huggingface__transformers-15795,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/15739,https://github.com/huggingface/transformers/pull/15795
+huggingface__transformers-15843,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/15840,https://github.com/huggingface/transformers/pull/15843
+huggingface__transformers-16198,huggingface/transformers,Python,Bug Fix,evaluation,https://github.com/huggingface/transformers/issues/16185,https://github.com/huggingface/transformers/pull/16198
+huggingface__transformers-16661,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/16660,https://github.com/huggingface/transformers/pull/16661
+huggingface__transformers-17082,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/15735,https://github.com/huggingface/transformers/pull/17082
+huggingface__transformers-18851,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/18839,https://github.com/huggingface/transformers/pull/18851
+huggingface__transformers-19590,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/19528,https://github.com/huggingface/transformers/pull/19590
+huggingface__transformers-19657,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/19289,https://github.com/huggingface/transformers/pull/19657
+huggingface__transformers-20136,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/18748,https://github.com/huggingface/transformers/pull/20136
+huggingface__transformers-21345,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/21344,https://github.com/huggingface/transformers/pull/21345
+huggingface__transformers-21768,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/21689,https://github.com/huggingface/transformers/pull/21768
+huggingface__transformers-21969,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/21915,https://github.com/huggingface/transformers/pull/21969
+huggingface__transformers-22158,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/22147,https://github.com/huggingface/transformers/pull/22158
+huggingface__transformers-22458,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/22392,https://github.com/huggingface/transformers/pull/22458
+huggingface__transformers-22649,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/21685,https://github.com/huggingface/transformers/pull/22649
+huggingface__transformers-22920,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/22904,https://github.com/huggingface/transformers/pull/22920
+huggingface__transformers-23126,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/20249,https://github.com/huggingface/transformers/pull/23126
+huggingface__transformers-23141,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/23140,https://github.com/huggingface/transformers/pull/23141
+huggingface__transformers-23223,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/22175,https://github.com/huggingface/transformers/pull/23223
+huggingface__transformers-23796,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/23764,https://github.com/huggingface/transformers/pull/23796
+huggingface__transformers-24238,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/24104,https://github.com/huggingface/transformers/pull/24238
+huggingface__transformers-25636,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/25634,https://github.com/huggingface/transformers/pull/25636
+huggingface__transformers-25765,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/23331,https://github.com/huggingface/transformers/pull/25765
+huggingface__transformers-25884,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/25804,https://github.com/huggingface/transformers/pull/25884
+huggingface__transformers-26164,huggingface/transformers,Python,Bug Fix,evaluation,https://github.com/huggingface/transformers/issues/25422,https://github.com/huggingface/transformers/pull/26164
+huggingface__transformers-26568,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/26566,https://github.com/huggingface/transformers/pull/26568
+huggingface__transformers-26752,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/25271,https://github.com/huggingface/transformers/pull/26752
+huggingface__transformers-26839,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/26428,https://github.com/huggingface/transformers/pull/26839
+huggingface__transformers-27114,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/27050,https://github.com/huggingface/transformers/pull/27114
+huggingface__transformers-27463,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/27361,https://github.com/huggingface/transformers/pull/27463
+huggingface__transformers-27663,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/27381,https://github.com/huggingface/transformers/pull/27663
+huggingface__transformers-27717,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/26497,https://github.com/huggingface/transformers/pull/27717
+huggingface__transformers-28071,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/26598,https://github.com/huggingface/transformers/pull/28071
+huggingface__transformers-28115,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/28021,https://github.com/huggingface/transformers/pull/28115
+huggingface__transformers-28398,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/23116,https://github.com/huggingface/transformers/pull/28398
+huggingface__transformers-28517,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/28505,https://github.com/huggingface/transformers/pull/28517
+huggingface__transformers-28535,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/28387,https://github.com/huggingface/transformers/pull/28535
+huggingface__transformers-28563,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/28002,https://github.com/huggingface/transformers/pull/28563
+huggingface__transformers-29311,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/29243,https://github.com/huggingface/transformers/pull/29311
+huggingface__transformers-29449,huggingface/transformers,Python,Bug Fix,evaluation,https://github.com/huggingface/transformers/issues/28591,https://github.com/huggingface/transformers/pull/29449
+huggingface__transformers-29519,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/29176,https://github.com/huggingface/transformers/pull/29519
+huggingface__transformers-29563,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/29514,https://github.com/huggingface/transformers/pull/29563
+huggingface__transformers-29675,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/29665,https://github.com/huggingface/transformers/pull/29675
+huggingface__transformers-29688,huggingface/transformers,Python,Feature,,https://github.com/huggingface/transformers/issues/29685,https://github.com/huggingface/transformers/pull/29688
+huggingface__transformers-30556,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/30521,https://github.com/huggingface/transformers/pull/30556
+huggingface__transformers-30602,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/30601,https://github.com/huggingface/transformers/pull/30602
+huggingface__transformers-30899,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/30892,https://github.com/huggingface/transformers/pull/30899
+huggingface__transformers-30934,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/30922,https://github.com/huggingface/transformers/pull/30934
+huggingface__transformers-30964,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/29625,https://github.com/huggingface/transformers/pull/30964
+huggingface__transformers-31217,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/31216,https://github.com/huggingface/transformers/pull/31217
+huggingface__transformers-31448,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/31435,https://github.com/huggingface/transformers/pull/31448
+huggingface__transformers-31646,huggingface/transformers,Python,Bug Fix,,https://github.com/huggingface/transformers/issues/31642,https://github.com/huggingface/transformers/pull/31646
+langchain-ai__langchain-3367,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/3365,https://github.com/langchain-ai/langchain/pull/3367
+langchain-ai__langchain-4009,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/3988,https://github.com/langchain-ai/langchain/pull/4009
+langchain-ai__langchain-4103,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/4087,https://github.com/langchain-ai/langchain/pull/4103
+langchain-ai__langchain-4420,langchain-ai/langchain,Python,Bug Fix,evaluation,https://github.com/langchain-ai/langchain/issues/4153,https://github.com/langchain-ai/langchain/pull/4420
+langchain-ai__langchain-4579,langchain-ai/langchain,Python,Bug Fix,evaluation,https://github.com/langchain-ai/langchain/issues/4167,https://github.com/langchain-ai/langchain/pull/4579
+langchain-ai__langchain-4646,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/3709,https://github.com/langchain-ai/langchain/pull/4646
+langchain-ai__langchain-5450,langchain-ai/langchain,Python,Feature,,https://github.com/langchain-ai/langchain/issues/3605,https://github.com/langchain-ai/langchain/pull/5450
+langchain-ai__langchain-5584,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/5582,https://github.com/langchain-ai/langchain/pull/5584
+langchain-ai__langchain-5609,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/5601,https://github.com/langchain-ai/langchain/pull/5609
+langchain-ai__langchain-5625,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/5614,https://github.com/langchain-ai/langchain/pull/5625
+langchain-ai__langchain-6765,langchain-ai/langchain,Python,Bug Fix,evaluation,https://github.com/langchain-ai/langchain/issues/6756,https://github.com/langchain-ai/langchain/pull/6765
+langchain-ai__langchain-19331,langchain-ai/langchain,Python,Feature,,https://github.com/langchain-ai/langchain/issues/19276,https://github.com/langchain-ai/langchain/pull/19331
+langchain-ai__langchain-20064,langchain-ai/langchain,Python,Bug Fix,,https://github.com/langchain-ai/langchain/issues/11408,https://github.com/langchain-ai/langchain/pull/20064
+yt-dlp__yt-dlp-4841,yt-dlp/yt-dlp,Python,Bug Fix,,https://github.com/yt-dlp/yt-dlp/issues/4187,https://github.com/yt-dlp/yt-dlp/pull/4841
+yt-dlp__yt-dlp-5195,yt-dlp/yt-dlp,Python,Bug Fix,,https://github.com/yt-dlp/yt-dlp/issues/5186,https://github.com/yt-dlp/yt-dlp/pull/5195
+yt-dlp__yt-dlp-5933,yt-dlp/yt-dlp,Python,Bug Fix,,https://github.com/yt-dlp/yt-dlp/issues/5953,https://github.com/yt-dlp/yt-dlp/pull/5933
+yt-dlp__yt-dlp-9862,yt-dlp/yt-dlp,Python,Bug Fix,setup,https://github.com/yt-dlp/yt-dlp/issues/9843,https://github.com/yt-dlp/yt-dlp/pull/9862
+yt-dlp__yt-dlp-10390,yt-dlp/yt-dlp,Python,Bug Fix,,https://github.com/yt-dlp/yt-dlp/issues/10391,https://github.com/yt-dlp/yt-dlp/pull/10390
+keras-team__keras-18553,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/18535,https://github.com/keras-team/keras/pull/18553
+keras-team__keras-18871,keras-team/keras,Python,Refactoring,,https://github.com/keras-team/keras/issues/18864,https://github.com/keras-team/keras/pull/18871
+keras-team__keras-18975,keras-team/keras,Python,Bug Fix,development,https://github.com/keras-team/keras/issues/18970,https://github.com/keras-team/keras/pull/18975
+keras-team__keras-19190,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19180,https://github.com/keras-team/keras/pull/19190
+keras-team__keras-19201,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19199,https://github.com/keras-team/keras/pull/19201
+keras-team__keras-19459,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19437,https://github.com/keras-team/keras/pull/19459
+keras-team__keras-19466,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19407,https://github.com/keras-team/keras/pull/19466
+keras-team__keras-19484,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19411,https://github.com/keras-team/keras/pull/19484
+keras-team__keras-19636,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19629,https://github.com/keras-team/keras/pull/19636
+keras-team__keras-19641,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19591,https://github.com/keras-team/keras/pull/19641
+keras-team__keras-19773,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19770,https://github.com/keras-team/keras/pull/19773
+keras-team__keras-19775,keras-team/keras,Python,Bug Fix,development,https://github.com/keras-team/keras/issues/19772,https://github.com/keras-team/keras/pull/19775
+keras-team__keras-19826,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19821,https://github.com/keras-team/keras/pull/19826
+keras-team__keras-19838,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19825,https://github.com/keras-team/keras/pull/19838
+keras-team__keras-19844,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19828,https://github.com/keras-team/keras/pull/19844
+keras-team__keras-19863,keras-team/keras,Python,Bug Fix,development,https://github.com/keras-team/keras/issues/19535,https://github.com/keras-team/keras/pull/19863
+keras-team__keras-19915,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19913,https://github.com/keras-team/keras/pull/19915
+keras-team__keras-19924,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19921,https://github.com/keras-team/keras/pull/19924
+keras-team__keras-19937,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19932,https://github.com/keras-team/keras/pull/19937
+keras-team__keras-19973,keras-team/keras,Python,Bug Fix,development,https://github.com/keras-team/keras/issues/19769,https://github.com/keras-team/keras/pull/19973
+keras-team__keras-20002,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19982,https://github.com/keras-team/keras/pull/20002
+keras-team__keras-20008,keras-team/keras,Python,Bug Fix,,https://github.com/keras-team/keras/issues/19991,https://github.com/keras-team/keras/pull/20008
+coder__code-server-3277,coder/code-server,TypeScript,Bug Fix,,https://github.com/coder/code-server/issues/2985,https://github.com/coder/code-server/pull/3277

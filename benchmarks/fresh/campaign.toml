@@ -1,0 +1,13 @@
+adapter = "codex"
+worker_model = "gpt-6-luna"
+judgment_model = "gpt-6.1-sol"
+reasoning_effort = "medium"
+windows_sandbox = "elevated"
+max_revisions = 1
+max_attempts = 1
+max_resumes = 2
+attempt_timeout_seconds = 300
+verification_timeout_seconds = 90
+run_timeout_seconds = 1200
+max_observed_tokens = 800000
+max_log_bytes = 20000000
