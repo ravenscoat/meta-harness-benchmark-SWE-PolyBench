@@ -74,12 +74,12 @@ replace the installed agent program.
 - **Auditable execution:** source snapshots, task identities, usage and runtime
   records make agent experiments reproducible.
 
-The compatibility-aware program is available as an
-[experimental agent example](examples/agents/compatibility_guard.py).
-It is an implementation artifact; a comparative solve-rate improvement has
-not been established.
+The [experimental compatibility-aware agent](examples/agents/compatibility_guard.py)
+shows how public execution feedback can become reusable workflow logic: inspect
+compatibility findings, request a focused repair and verify the delivered patch.
+Agent-program proposals remain subject to measured evaluation before adoption.
 
-## Benchmark evaluation
+## SWE-PolyBench integration
 
 **SWE-PolyBench** provides repository-level software-engineering tasks across
 multiple programming languages. This implementation has been exercised on
@@ -89,9 +89,10 @@ containerized execution and the upstream official evaluator.
 The repository includes the benchmark adapter, worker preparation, public-test
 verification, patch delivery and reusable-agent comparison machinery.
 
-The baseline coding workflow completed two officially resolved Serverless3457
-trials with public verification. These demonstrate end-to-end execution on
-selected tasks; they are separate from evaluating a newly proposed agent program.
+The evaluation pipeline connects repository preparation, coding, public
+verification and official patch evaluation. Reusable-program comparisons use
+fixed development tasks and conditionally evaluate selected programs on separate
+reserved tasks, with consistent model settings and execution budgets.
 
 [Architecture](docs/ARCHITECTURE.md) · [Benchmark integration](docs/BENCHMARK.md)
 
