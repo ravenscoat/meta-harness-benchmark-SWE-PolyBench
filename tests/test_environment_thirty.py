@@ -66,3 +66,15 @@ def test_missing_or_duplicate_anchor_fails_closed():
         select(rows, set(), anchors[:2])
     with pytest.raises(ValueError, match="anchor"):
         select(rows, set(), anchors + [anchors[0]])
+
+def test_amended_recheck_retains_all_failures_and_original_order():
+    from scripts.run_environment_thirty import amended_scope
+    cases = [{'id': str(i)} for i in range(30)]
+    results = {'complete': True, 'rows': [{'case': str(i), 'passed': i >= 14} for i in range(30)]}
+    amendment = {'cases': [str(i) for i in range(25)], 'parent_plan_sha256': 'p', 'parent_results_sha256': 'r', 'window_seconds': 28800, 'model_calls_allowed': 0}
+    assert amended_scope(cases, results, amendment, 'p', 'r') == cases[:25]
+    for mutation, message in [({'parent_plan_sha256': 'changed'}, 'evidence'), ({'cases': [str(i) for i in range(1,26)]}, 'failed'), ({'cases': ['outside'] + amendment['cases'][1:]}, 'unique'), ({'cases': list(reversed(amendment['cases']))}, 'order'), ({'window_seconds': 30000}, 'eight-hour'), ({'model_calls_allowed': 1}, 'model-free')]:
+        with pytest.raises(ValueError, match=message):
+            amended_scope(cases, results, {**amendment, **mutation}, 'p', 'r')
+    with pytest.raises(ValueError, match='incomplete'):
+        amended_scope(cases, {**results, 'complete': False}, amendment, 'p', 'r')

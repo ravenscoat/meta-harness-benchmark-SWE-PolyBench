@@ -19,7 +19,7 @@ from hx.models import Contract, HXError, ProcessTimeout
 from hx.repo_context import inspect
 from hx.store import atomic_write
 
-VERSION = "executable-worker-scaffold@1"
+VERSION = "executable-worker-scaffold@2"
 TARGET = "candidate_scaffold.py"
 OPTIONAL_CONTEXT = {"selected_source", "tracked_files_prefix", "repository_map", "environment_snapshot"}
 MAX_DELEGATES = 2
@@ -149,6 +149,11 @@ class WorkerScaffoldAdapter:
                 raise HXError("Scaffold delegate-call limit exceeded")
             check_control()
             if self.headroom is not None and self.headroom() < self.settings.repair_token_reserve:
+                if result is not None:
+                    emit('scaffold.check_skipped', {'reason': 'insufficient_token_headroom',
+                        'worker_calls': state['worker_calls'], 'candidate_preserved': True})
+                    atomic_write(log_dir / 'result.json', canonical(result))
+                    return result
                 raise HXError("Scaffold insufficient token headroom for another worker call")
             # Only explicitly optional source inventories can be omitted. Task,
             # verification, independent challenge and all other contracts persist.

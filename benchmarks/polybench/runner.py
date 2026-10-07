@@ -19,8 +19,8 @@ from hx.models import HXError
 from hx.optimization import final_candidate
 
 HERE = Path(__file__).parent
-BINARY = Path(os.environ.get("HX_CODEX_BINARY", "/opt/hx-codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex"))
-AUTH = Path(os.environ.get("HX_CODEX_AUTH", str(Path.home() / ".codex/auth.json")))
+BINARY = Path("/opt/hx-codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex")
+AUTH = Path("/mnt/c/Users/quandale dingle UwU/.codex/auth.json")
 VENDOR = Path(".hx/vendor/SWE-PolyBench-9c836c5d")
 
 

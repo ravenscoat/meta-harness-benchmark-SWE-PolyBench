@@ -169,8 +169,31 @@ def runner_smoke(client, case, workspace, directory, settings, control):
         container.remove(force=True)
 
 
-def run(root, recheck_from=None):
+def amended_scope(cases, results, amendment, parent_hash, results_hash):
+    """Explicit diagnostic subset; retain every failed/blocked parent case."""
+    if amendment.get("parent_plan_sha256") != parent_hash or amendment.get("parent_results_sha256") != results_hash:
+        raise ValueError("Amendment parent evidence changed")
+    ids = amendment.get("cases", [])
+    original = [c["id"] for c in cases]
+    if len(ids) != 25 or len(set(ids)) != 25 or not set(ids) <= set(original):
+        raise ValueError("Amendment requires 25 unique original identities")
+    rows = results.get("rows", [])
+    if not results.get("complete") or {r["case"] for r in rows} != set(original):
+        raise ValueError("Parent results incomplete")
+    if not {r["case"] for r in rows if not r["passed"]} <= set(ids):
+        raise ValueError("All failed or blocked identities must remain")
+    if ids != [key for key in original if key in set(ids)]:
+        raise ValueError("Original relative order must remain")
+    if amendment.get("window_seconds") != 28800 or amendment.get("model_calls_allowed") != 0:
+        raise ValueError("Only eight-hour model-free amendment supported")
+    return [c for c in cases if c["id"] in set(ids)]
+
+
+def run(root, recheck_from=None, amendment_path=None):
     import docker
+
+    if amendment_path and not recheck_from:
+        raise ValueError("Scope amendment requires a parent recheck")
 
     with FileLock(".hx/single-evaluation-controller.lock", timeout=0):
         if root.exists():
@@ -198,6 +221,13 @@ def run(root, recheck_from=None):
         else:
             anchors = json.loads((ANCHOR / "selection.json").read_text())["cases"]
             cases = select(read_rows(SOURCE / "dataset.csv"), excluded, anchors)
+        amendment = None
+        if amendment_path:
+            amendment = json.loads(amendment_path.read_text())
+            if sha(amendment_path) != json.loads(amendment_path.with_suffix(".lock.json").read_text())["sha256"]:
+                raise RuntimeError("Scope amendment changed")
+            cases = amended_scope(cases, json.loads((recheck_from / "results.json").read_text()), amendment,
+                                  sha(recheck_from / "plan.json"), sha(recheck_from / "results.json"))
         root.mkdir(parents=True)
         for name in ["dataset.csv", "storage.json"]:
             shutil.copyfile(SOURCE / name, root / name)
@@ -208,13 +238,16 @@ def run(root, recheck_from=None):
                 **original,
                 "cases": cases,
                 "seed": SEED,
-                "selection_rule": "Three preselected uncoded anchors plus nine untouched metadata hash-ranked bugs/features per repository. All30 locked before image/build results; no replacement.",
+                "selection_rule": "Explicit outcome-informed 25-case diagnostic recheck; all flags/blocks and eleven controls, original order preserved." if amendment else "Three preselected uncoded anchors plus nine untouched metadata hash-ranked bugs/features per repository. All30 locked before image/build results; no replacement.",
             },
         )
-        started = parent_plan["started"] if parent_plan else time.time()
+        started = parent_plan["started"] if parent_plan and not amendment else time.time()
         inputs = [
             root / n for n in ["dataset.csv", "storage.json", "settings.toml", "selection.json"]
         ]
+        if amendment_path:
+            shutil.copyfile(amendment_path, root / "scope-amendment.json")
+            inputs.append(root / "scope-amendment.json")
         files = [
             Path(__file__),
             *Path("benchmarks/polybench").glob("*.py"),
@@ -222,10 +255,10 @@ def run(root, recheck_from=None):
             Path("scripts/run_lean_three.py"),
         ]
         plan = {
-            "version": "environment-thirty@1",
+            "version": "environment-diagnostic@2" if amendment else "environment-thirty@1",
             "cases": [c["id"] for c in cases],
             "started": started,
-            "deadline": parent_plan["deadline"] if parent_plan else started + 28800,
+            "deadline": parent_plan["deadline"] if parent_plan and not amendment else started + 28800,
             "model_calls_allowed": 0,
             "official_calls_allowed": 0,
             "parallelism": 1,
@@ -234,7 +267,7 @@ def run(root, recheck_from=None):
             "source": {str(p.resolve()): sha(p) for p in files},
             "historical_scores": history,
             "exposure_records": exposure,
-            "limitations": "30selected JS/TS-family tasks,10each MUI/Svelte/Serverless;3anchors27new. No coding/scorer calls. Dependency/build and synthetic runner execution are not task correctness.",
+            "limitations": "25 outcome-informed diagnostic environments, nine MUI/eight Svelte/eight Serverless; fourteen previous flags/blocks and eleven controls. No models or official grading; smoke is not correctness." if amendment else "30selected JS/TS-family tasks,10each MUI/Svelte/Serverless;3anchors27new. No coding/scorer calls. Dependency/build and synthetic runner execution are not task correctness.",
             "recheck_from": str(recheck_from.resolve()) if recheck_from else None,
         }
         write(root / "plan.json", plan)
@@ -270,9 +303,9 @@ def run(root, recheck_from=None):
 
         def report():
             value = {
-                "planned": 30,
+                "planned": len(cases),
                 "attempted": len(rows),
-                "complete": len(rows) == 30,
+                "complete": len(rows) == len(cases),
                 "passed": sum(r["passed"] for r in rows),
                 "rows": rows,
                 "model_calls": 0,
@@ -318,7 +351,7 @@ def run(root, recheck_from=None):
             client = docker.from_env(timeout=120)
             settings = load_settings(root / "settings.toml")
             base_root = Path("/opt/hx-polybench-runtime/v1") / root.name / "bases"
-            for offset in range(0, 30, 3):
+            for offset in range(0, len(cases), 3):
                 group = cases[offset : offset + 3]
                 group_root = root / "groups" / str(offset // 3 + 1)
                 write(group_root / "selection.json", {"cases": group})
@@ -433,5 +466,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("root", type=Path)
     parser.add_argument("--recheck-from", type=Path)
+    parser.add_argument("--scope-amendment", type=Path)
     args = parser.parse_args()
-    run(args.root, args.recheck_from)
+    run(args.root, args.recheck_from, args.scope_amendment)

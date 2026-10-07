@@ -309,6 +309,7 @@ def test_preparation_does_not_consume_model_window_but_global_deadline_still_bin
 
 def test_worker_build_failure_blocks_model_launch(monkeypatch, tmp_path):
     import benchmarks.polybench.containers as module
+    monkeypatch.setattr('benchmarks.polybench.sessions.workspace_tree', lambda *a: 'input-tree')
     removed = []
     container = SimpleNamespace(remove=lambda **kw: removed.append(kw))
     monkeypatch.setattr(module, "create", lambda *a: (container, "/testbed"))

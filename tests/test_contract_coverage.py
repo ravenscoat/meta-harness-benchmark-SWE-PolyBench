@@ -181,7 +181,8 @@ def test_false_mapping_semantics_are_not_claimed_to_be_independently_verified(tm
     assert "not independent semantic proof" in LIMITATION
 
 
-def test_public_green_and_base_red_still_block_when_coverage_is_missing(monkeypatch, tmp_path):
+@pytest.mark.parametrize('kind', ['bug', 'feature'])
+def test_public_green_and_base_red_still_block_when_coverage_is_missing(monkeypatch, tmp_path, kind):
     import benchmarks.polybench.engine as module
     from hx.models import Settings
     container = SimpleNamespace(id="public", remove=lambda **kwargs: None)
@@ -192,7 +193,7 @@ def test_public_green_and_base_red_still_block_when_coverage_is_missing(monkeypa
     monkeypatch.setattr(module, "regression_check", lambda *a: Check(name="reproduced", passed=True, evidence="base failed"))
     saved = candidate(tmp_path, [])
     saved.changed_files = ["service.js"]
-    task = SimpleNamespace(base_commit="a", report=REPORT, kind="bug")
+    task = SimpleNamespace(base_commit="a", report=REPORT, kind=kind)
     result = module.VisibleVerifier(Settings(), None, {}).run(saved, task, tmp_path, lambda: None, lambda *a: None)
     assert not result.passed
     assert next(c for c in result.checks if c.name == "public_contract_coverage").passed is False
@@ -221,7 +222,8 @@ def test_metadata_only_revision_preserves_source_and_rejects_unchanged_noop(tmp_
         derive_with_test_plan(tmp_path, task, previous.candidate_commit, previous, summary)
 
 
-def test_missing_coverage_reaches_repair_and_metadata_only_fix_preserves_commit(project, setup_engine):
+@pytest.mark.parametrize('kind', ['bug', 'feature'])
+def test_missing_coverage_reaches_repair_and_metadata_only_fix_preserves_commit(project, setup_engine, kind):
     from benchmarks.polybench.engine import PolyEngine
     from hx.engine import Engine
     from hx.models import Verification
@@ -258,7 +260,7 @@ def test_missing_coverage_reaches_repair_and_metadata_only_fix_preserves_commit(
             return Verification(candidate_commit=candidate.candidate_commit, passed=check.passed,
                                 checks=[check], changed_line_coverage=None, known_gaps=[LIMITATION])
     engine.verifier = FixtureVerifier()
-    task = project["missing-task"].model_copy(update={"report": REPORT})
+    task = project["missing-task"].model_copy(update={"report": REPORT, "kind": kind})
     run = engine.create(task)
     result = engine.execute(run["id"])
     assert result["status"] == "ready_for_approval", result["error"]
