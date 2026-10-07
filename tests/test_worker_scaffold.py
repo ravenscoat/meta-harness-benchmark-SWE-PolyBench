@@ -112,6 +112,23 @@ def test_deadline_and_cancellation_are_shared_not_reset(tmp_path):
         execute(tmp_path, control=cancelled)
 
 
+def test_budget_exhaustion_preserves_first_result_without_another_call(tmp_path):
+    path = source(tmp_path, '    return ' + repr(action('delegate')) +
+        " if state['worker_calls'] < 2 else " + repr(action('finish')))
+    delegate = Delegate()
+    wrapped = WorkerScaffoldAdapter(delegate, path, Settings(repair_token_reserve=5000))
+    wrapped.headroom = lambda: 5000 if not delegate.calls else 4999
+    events = []
+    result = wrapped.run('implementer', Task(id='x', repo=str(tmp_path), report='Fix behavior'),
+        tmp_path, {}, 'FIXED', WorkerSummary, tmp_path/'budget-run', lambda: None,
+        lambda kind, data: events.append((kind, data)), 30)
+    assert len(delegate.calls) == 1
+    assert result['verification_commands'] == [['pytest', 'tests/test_behavior.py']]
+    assert any(kind == 'scaffold.check_skipped' and data['candidate_preserved']
+               for kind,data in events)
+    assert (tmp_path/'budget-run/result.json').exists()
+
+
 def test_candidate_mutation_after_fingerprint_rejected(tmp_path):
     path = source(tmp_path, '    return ' + repr(action('delegate')))
     planner = Planner(path)

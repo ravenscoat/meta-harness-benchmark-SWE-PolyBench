@@ -48,7 +48,7 @@ BASE_POLICY = Policy(name="current", hypothesis="Current HX with common reposito
 
 
 class VisibleVerifier:
-    version = "polybench-public-tests@12"
+    version = "polybench-public-tests@13"
 
     def __init__(self, settings, client, case):
         self.settings, self.client, self.case = settings, client, case
@@ -119,7 +119,7 @@ class VisibleVerifier:
                      "-w", workdir, container.id, *capture_argv(actual, self.settings.max_log_bytes)],
                     directory, clean_env(), directory / name, self.settings, check_control, emit))
                 public_checks.append(checks[-1])
-            if getattr(task, "kind", "bug") == "bug" and all(c.passed for c in checks):
+            if all(c.passed for c in checks):
                 # A second disposable container restores original production source
                 # and overlays only public test changes. No additional model call.
                 container.remove(force=True)
@@ -127,11 +127,10 @@ class VisibleVerifier:
                 checks.append(regression_check(candidate, task, directory / "base_replay",
                     self.settings, self.client, self.case, check_control, emit))
                 gaps.append(LIMITATION)
-            elif getattr(task, "kind", "bug") == "bug":
+            else:
                 gaps.append("Base reproduction replay deferred until candidate public checks pass.")
-            if getattr(task, "kind", "bug") == "bug":
-                checks.append(coverage_check(candidate, task, directory, public_checks, emit))
-                gaps.append(COVERAGE_LIMITATION)
+            checks.append(coverage_check(candidate, task, directory, public_checks, emit))
+            gaps.append(COVERAGE_LIMITATION)
             assert_clean(Path(candidate.workspace), candidate.candidate_commit)
             return Verification(candidate_commit=candidate.candidate_commit,
                 passed=all(c.passed for c in checks), checks=checks,
@@ -143,12 +142,10 @@ class VisibleVerifier:
 
 class PolyEngine(Engine):
     def _implementation_contract(self, task):
-        return CoverageSummary if task.kind == "bug" else super()._implementation_contract(task)
+        return CoverageSummary
 
     def _candidate_metadata(self, task, summary):
-        if task.kind == "bug":
-            return {"public_contract": evidence_plan(task.report, summary.contract_cases)}
-        return {}
+        return {"public_contract": evidence_plan(task.report, summary.contract_cases)}
 
     def __init__(self, store, settings, client, case, binary, auth, policy=BASE_POLICY, worker_scaffold=None):
         super().__init__(store, settings, ContainerAdapter(settings, client, case, binary, auth))
@@ -181,7 +178,7 @@ class PolyEngine(Engine):
             "test_environment": "This is the upstream benchmark dependency image. Use existing public tests and tooling; do not assume a FastAPI/frontend layout. Private acceptance is not available inside this container."}
         if role == "implementer":
             context["public_test_runner_contract"] = public_test_contract()
-            if task.kind == "bug":
+            if task.kind in {"bug", "feature"}:
                 context["public_contract_inventory"] = contract_inventory(task.report)
                 context["public_contract_evidence_rules"] = (
                     "Return contract_cases covering every requirement/scenario in the supplied inventory. "
@@ -201,7 +198,7 @@ class PolyEngine(Engine):
                 "Your regression-test edits are retained for public verification; benchmark delivery excludes conventional "
                 "test paths so the independent evaluator can install its own tests. Production code must not depend on your tests. "
                 "HX will independently replay these in a fresh offline candidate container and feed failures into revision. "
-                "For bug tasks, HX also replays your public test changes against original production code in a second "
+                "For bug AND feature tasks, HX also replays your public test changes against original production code in a second "
                 "offline container. At least one command must show a recognized behavioral test failure there, while "
                 "your candidate passes every command. Import/collection errors, hangs and empty runs are not reproduction. "
                 "Use existing test runners and public test paths; only conventional test-path edits enter the base replay. "

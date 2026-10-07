@@ -14,9 +14,11 @@ from hx.store import Store
 def pytest_configure(config):
     # Keep fixtures inside this project, including under restricted Windows sessions.
     if not config.option.basetemp:
-        fixture_root = Path(__file__).resolve().parents[1] / ".hx"
-        fixture_root.mkdir(parents=True, exist_ok=True)
-        config.option.basetemp = str(fixture_root / ("test-" + uuid4().hex[:8]))
+        state_root = Path(__file__).resolve().parents[1] / ".hx"
+        state_root.mkdir(parents=True, exist_ok=True)
+        config.option.basetemp = str(
+            state_root / ("test-" + uuid4().hex[:8])
+        )
 
 
 @pytest.fixture

@@ -164,18 +164,20 @@ def test_cache_releases_only_recorded_tags_without_containers(tmp_path):
         reference = f"ghcr.io/example/{key}:v1.1"
         cases[key] = {"id": key, "language": "Python", "image_id": key,
                       "image_reference": reference, "image_digests": [f"ghcr.io/example/{key}@sha256:digest"]}
-        tags = [f"polybench_python_{key}:latest", reference, cases[key]["image_digests"][0]]
+        tags = [f"polybench_python_{key}:latest", reference]
         if key == "shared":
             tags.append("user-project:latest")
-        images[key] = SimpleNamespace(id=key, tags=tags)
+        images[key] = SimpleNamespace(id=key, tags=tags,
+            attrs={"RepoDigests": cases[key]["image_digests"]})
     (tmp_path / "images.json").write_text(json.dumps(cases))
     removed = []
     client = SimpleNamespace(images=SimpleNamespace(get=images.__getitem__,
         remove=lambda tag, force: removed.append((tag, force))),
         containers=SimpleNamespace(list=lambda all, filters: [object()] if filters["ancestor"] == "inuse" else []))
     trim_images(client, tmp_path, keep=["keep"])
-    assert removed == [("polybench_python_owned:latest", False), ("ghcr.io/example/owned:v1.1", False),
-                       ("ghcr.io/example/owned@sha256:digest", False)]
+    assert removed == [("ghcr.io/example/owned:v1.1", False),
+                       ("ghcr.io/example/owned@sha256:digest", False),
+                       ("polybench_python_owned:latest", False), ("owned", False)]
 
 
 def test_reference_gate_follows_official_resolution_and_rejects_environment_errors():

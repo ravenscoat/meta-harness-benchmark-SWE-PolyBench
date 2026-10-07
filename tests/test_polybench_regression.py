@@ -140,7 +140,7 @@ def test_cancellation_propagates_and_removes_base_container(monkeypatch, tmp_pat
     assert removed == [{"force": True}]
 
 
-def test_candidate_green_without_base_red_blocks_bug_readiness(monkeypatch, tmp_path):
+def test_candidate_green_without_base_red_blocks_bug_and_feature_readiness(monkeypatch, tmp_path):
     import benchmarks.polybench.engine as module
     removed = []
     container = SimpleNamespace(id="candidate", remove=lambda **kw: removed.append(kw))
@@ -160,7 +160,7 @@ def test_candidate_green_without_base_red_blocks_bug_readiness(monkeypatch, tmp_
     assert removed == [{"force": True}]
     assert any("not proof of issue relevance" in gap for gap in result.known_gaps)
     task.kind = "feature"
-    assert verifier.run(candidate, task, tmp_path, lambda: None, lambda *a: None).passed
+    assert not verifier.run(candidate, task, tmp_path, lambda: None, lambda *a: None).passed
 
 
 def test_differential_gate_does_not_claim_issue_completeness():

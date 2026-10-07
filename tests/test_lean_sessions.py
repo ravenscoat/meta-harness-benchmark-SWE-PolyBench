@@ -65,6 +65,63 @@ def test_sessions_isolate_task_run_model_schema_and_exact_source():
     assert sessions.get(key, 'tree1') is None
 
 
+def test_delivered_dirty_workspace_resumes_but_later_mutation_is_rejected(tmp_path):
+    from benchmarks.polybench.sessions import workspace_tree
+    from hx.git import git
+    git(tmp_path, 'init')
+    git(tmp_path, 'config', 'user.name', 'Test')
+    git(tmp_path, 'config', 'user.email', 'test@hx.local')
+    (tmp_path/'source.py').write_text('value = 0\n')
+    git(tmp_path, 'add', '--all')
+    git(tmp_path, 'commit', '-m', 'base')
+    base = git(tmp_path, 'rev-parse', 'HEAD^{tree}')
+    (tmp_path/'source.py').write_text('value = 1\n')
+    (tmp_path/'regression.py').write_text('assert value == 1\n')
+    index_before = (tmp_path/'.git/index').read_bytes()
+    delivered = workspace_tree(tmp_path)
+    assert delivered != base
+    assert (tmp_path/'.git/index').read_bytes() == index_before
+    assert git(tmp_path, 'rev-parse', 'HEAD^{tree}') == base
+    sessions = TaskSessions()
+    sessions.save('key', IDENTIFIER, delivered, {})
+    assert sessions.get('key', workspace_tree(tmp_path)).identifier == IDENTIFIER
+    (tmp_path/'regression.py').write_text('unexpected mutation\n')
+    with pytest.raises(GateError, match='source differs'):
+        sessions.get('key', workspace_tree(tmp_path))
+
+
+def test_second_call_exports_delta_from_dirty_input_not_original_head(tmp_path, monkeypatch):
+    import shutil
+    import subprocess
+
+    from benchmarks.polybench import containers
+    from benchmarks.polybench.sessions import workspace_tree
+    from hx.git import git
+    host=tmp_path/'host'
+    host.mkdir()
+    git(host,'init')
+    git(host,'config','user.name','Test')
+    git(host,'config','user.email','test@hx.local')
+    (host/'source.py').write_text('value = 0\n')
+    git(host,'add','--all')
+    git(host,'commit','-m','base')
+    # First accepted worker delivery is intentionally uncommitted.
+    (host/'source.py').write_text('value = 1\n')
+    incoming=workspace_tree(host)
+    worker=tmp_path/'worker'
+    shutil.copytree(host,worker)
+    (worker/'source.py').write_text('# Reviewed\nvalue = 1\n')
+    def command(container, argv, directory, **kwargs):
+        actual=['git','-C',str(worker),*argv[1:]]
+        return subprocess.check_output(actual)
+    monkeypatch.setattr(containers,'command',command)
+    patch=containers.worker_patch(None,str(worker),incoming,[])
+    assert b'-value = 0' not in patch
+    subprocess.run(['git','-C',str(host),'apply','--binary','-'],input=patch,check=True)
+    assert workspace_tree(host)==workspace_tree(worker)
+    assert (host/'source.py').read_text()=='# Reviewed\nvalue = 1\n'
+
+
 def test_resume_flags_target_explicit_session_and_preserve_schema():
     argv = codex_arguments('model', 'workspace-write', 'medium', '/testbed', IDENTIFIER, True)
     assert argv[3] == 'resume'
@@ -108,6 +165,7 @@ def test_container_resume_uses_saved_history_and_invalidates_failed_continuation
     monkeypatch.setattr(module, 'build_check', lambda *a: None)
     monkeypatch.setattr(module, 'recipe', lambda *a: None)
     monkeypatch.setattr(module, 'git', lambda *a: 'tree')
+    monkeypatch.setattr('benchmarks.polybench.sessions.workspace_tree', lambda *a: 'tree')
     def command(_container, argv, *args, **kwargs):
         if argv == ['git', 'rev-parse', 'HEAD']:
             return b'head'
@@ -131,6 +189,8 @@ def test_container_resume_uses_saved_history_and_invalidates_failed_continuation
         log.mkdir()
         adapter.run('implementer', task, tmp_path,
             {'native_session_scope': 'run1', 'native_session_continuation': index == 1,
+             'executable_scaffold': {'guidance': 'Review public interface compatibility'},
+             'verification_contract': 'IMMUTABLE',
              'repair_plan': {'instruction': 'repair observed failure'}},
             'original instructions', WorkerSummary, log, lambda: None,
             lambda name, data: events.append((name, data)), 30)
@@ -138,6 +198,8 @@ def test_container_resume_uses_saved_history_and_invalidates_failed_continuation
     assert 'resume' in launches[1][0] and IDENTIFIER in launches[1][0]
     assert 'original instructions' not in launches[1][1]
     assert 'repair observed failure' in launches[1][1]
+    assert 'Review public interface compatibility' in launches[1][1]
+    assert 'IMMUTABLE' in launches[1][1]
     assert len(removed) == 2
     assert [data['resumed'] for name, data in events if name == 'worker.session'] == [False, True]
     assert (tmp_path / '1/native-history' / name).exists()

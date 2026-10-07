@@ -1,15 +1,34 @@
 """Opt-in task-local native Codex history; never restore credentials or other tasks."""
 import io
+import os
+import subprocess
 import tarfile
+import tempfile
 import uuid
 from dataclasses import dataclass
 from pathlib import PurePosixPath
 
 from hx.config import digest
 from hx.models import GateError
+from hx.process import clean_env
 
-VERSION = 'task-local-codex-history@1'
+VERSION = 'task-local-codex-history@2'
 MAX_HISTORY_BYTES = 16000000
+
+
+def workspace_tree(workspace):
+    """Fingerprint delivered files without changing HEAD or the caller's index."""
+    with tempfile.TemporaryDirectory(prefix='hx-session-index-') as temporary:
+        env = clean_env({'GIT_INDEX_FILE': os.path.join(temporary, 'index')})
+        prefix = ['git', '-c', 'safe.directory=' + str(workspace.resolve()),
+                  '-c', 'core.hooksPath=' + os.devnull, '-c', 'core.autocrlf=false',
+                  '-C', str(workspace)]
+        for args in [('read-tree', 'HEAD'), ('add', '--all'), ('write-tree',)]:
+            result = subprocess.run(prefix + list(args), env=env, capture_output=True,
+                                    text=True, timeout=30)
+            if result.returncode:
+                raise GateError('Cannot fingerprint session workspace: ' + result.stderr[-1500:])
+        return result.stdout.strip()
 
 
 def session_id(value):

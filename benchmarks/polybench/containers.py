@@ -107,6 +107,14 @@ def populate(container, workdir, workspace: Path, case):
     return git(workspace, "rev-parse", "HEAD")
 
 
+def worker_patch(container, workdir, input_tree, export_paths):
+    """Export only this call's edits, including when incoming files are dirty."""
+    command(container, ["git", "-c", "core.hooksPath=/dev/null", "add", "--all", *export_paths],
+            workdir, user="1000:1000")
+    return command(container, ["git", "diff", "--binary", "--no-ext-diff", "--no-textconv",
+                               input_tree, *export_paths], workdir)
+
+
 class ContainerAdapter:
     name = "codex-container"
     capabilities = {"streaming": True, "cancel": True, "mid_task_resume": False,
@@ -132,6 +140,10 @@ class ContainerAdapter:
             prepare_dependencies(container, self.case["repo"], log_dir / "dependencies", self.case["upstream_base"])
             share_public_fixture(container, self.case["repo"])
             input_repo = Path(self.case["repo_path"]) if role == "consolidator" else workspace
+            from benchmarks.polybench.sessions import workspace_tree
+            # Materialize the tree before copying .git so its objects exist in
+            # the container. HEAD intentionally remains the original commit.
+            input_tree = workspace_tree(input_repo)
             head = populate(container, workdir, input_repo, self.case)
             preflight = build_check(container, workdir, input_repo, self.case,
                 log_dir / "worker-preflight", self.settings, check_control, emit)
@@ -161,10 +173,10 @@ class ContainerAdapter:
             model = self.settings.judgment_model if role == "consolidator" else self.settings.worker_model
             sandbox = "workspace-write" if role == "implementer" else "read-only"
             if self.sessions is not None and role == 'implementer':
-                from benchmarks.polybench.sessions import session_id
+                from benchmarks.polybench.sessions import session_id, workspace_tree
                 session_key = self.sessions.key(context.get('native_session_scope'), task, model,
                                                 contract.model_json_schema(), workdir)
-                history = self.sessions.get(session_key, git(workspace, 'rev-parse', 'HEAD^{tree}'))
+                history = self.sessions.get(session_key, workspace_tree(workspace))
                 if history:
                     identifier = session_id(history.identifier)
                     container.put_archive('/hx-auth', archive(history.files, uid=1000))
@@ -187,7 +199,7 @@ class ContainerAdapter:
                           'Use the existing session history; repair only from this public feedback. '
                           'Return the same structured output contract.\n' + canonical({
                               'input_commit': head, 'repair_plan': context.get('repair_plan', {}),
-                              'working_directory': workdir}).decode())
+                              'working_directory': workdir, 'public_context': context}).decode())
             atomic_write(log_dir / "prompt.txt", prompt.encode())
             atomic_write(log_dir / "schema.json", canonical(contract.model_json_schema()))
             emit("worker.instantiated", {"role": role, "model": model, "sandbox": sandbox,
@@ -243,8 +255,8 @@ class ContainerAdapter:
                 raise GateError("worker changed Git history")
             if command(container, ["git", "remote"], workdir).strip():
                 raise GateError("worker added a Git remote")
-            command(container, ["git", "-c", "core.hooksPath=/dev/null", "add", "--all"], workdir, user="1000:1000")
-            patch = command(container, ["git", "diff", "--binary", "--no-ext-diff", "--no-textconv", "HEAD"], workdir)
+            export_paths = scaffold_export_paths(container, workdir, self.case["repo"])
+            patch = worker_patch(container, workdir, input_tree, export_paths)
             if role != "implementer" and patch:
                 raise GateError("reviewer changed candidate")
             if patch:
@@ -254,10 +266,12 @@ class ContainerAdapter:
                 if completed.returncode:
                     raise GateError("worker patch transfer failed: " + completed.stderr.decode(errors="replace")[-1500:])
             if session_key:
-                from benchmarks.polybench.sessions import history_files
+                from benchmarks.polybench.sessions import history_files, workspace_tree
                 chunks, _ = container.get_archive('/hx-auth/sessions')
                 files = history_files(chunks, identifier)
                 tree = command(container, ['git', 'write-tree'], workdir, user='1000:1000').decode().strip()
+                if workspace_tree(workspace) != tree:
+                    raise GateError('Transferred workspace differs from accepted worker delivery')
                 self.sessions.save(session_key, identifier, tree, files)
                 # Only rollouts are exported. No auth/config/provider files.
                 for name, data in files.items():
@@ -278,6 +292,16 @@ class ContainerAdapter:
         finally:
             # Cancel/deadline must kill remote work too, not just docker exec's client.
             container.remove(force=True)
+
+
+def scaffold_export_paths(container, workdir, repo):
+    """Pure-code carrier export excludes dependency caches, including symlinks."""
+    if repo != "hx/worker-scaffold":
+        return []
+    changed = command(container, ["git", "diff", "--name-only", "HEAD"], workdir).decode().splitlines()
+    if set(changed) - {"candidate_scaffold.py"}:
+        raise GateError("scaffold proposer changed protected tracked inputs")
+    return ["--", "candidate_scaffold.py"]
 
 
 def model_window(timeout, workflow_deadline, now, preparation_seconds):
