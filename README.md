@@ -57,7 +57,29 @@ Runtime, task inputs and evaluator identities are recorded before evaluation.
 Candidate selection requires measured comparison; it does not automatically
 replace the installed agent program.
 
-## Benchmark
+## Engineering improvements
+
+- **Reusable agent-program search:** a proposer generates executable workflow
+  candidates from public development traces, with paired baseline comparison
+  and a separate reserved-task selection stage.
+- **Compatibility-aware repair:** an experimental program recognizes excluded
+  checks and unresolved compatibility findings, then requests a focused revision
+  using public requirements and existing call-site behavior.
+- **Exact production-patch replay:** independent checks run against the source
+  delivered to the official evaluator, with task-local context across revisions.
+- **Reliable worker preparation:** pinned Docker images, offline worker checks
+  and source-aware builds establish the execution environment before coding.
+- **Bounded image lifecycle:** one-image working sets and transport-only retry
+  receipts support controlled storage and repeatable preparation.
+- **Auditable execution:** source snapshots, task identities, usage and runtime
+  records make agent experiments reproducible.
+
+The compatibility-aware program is available as an
+[experimental agent example](examples/agents/compatibility_guard.py).
+It is an implementation artifact; a comparative solve-rate improvement has
+not been established.
+
+## Benchmark evaluation
 
 **SWE-PolyBench** provides repository-level software-engineering tasks across
 multiple programming languages. This implementation has been exercised on
@@ -66,6 +88,10 @@ containerized execution and the upstream official evaluator.
 
 The repository includes the benchmark adapter, worker preparation, public-test
 verification, patch delivery and reusable-agent comparison machinery.
+
+The baseline coding workflow completed two officially resolved Serverless3457
+trials with public verification. These demonstrate end-to-end execution on
+selected tasks; they are separate from evaluating a newly proposed agent program.
 
 [Architecture](docs/ARCHITECTURE.md) · [Benchmark integration](docs/BENCHMARK.md)
 

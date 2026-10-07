@@ -23,4 +23,4 @@ jobs:
         run: >-
           python -m pytest
           tests/test_agent_diagnosis.py tests/test_agent_search.py
-          tests/test_agent_search_backend.py -q
+          tests/test_agent_search_backend.py tests/test_compatibility_agent_example.py -q
